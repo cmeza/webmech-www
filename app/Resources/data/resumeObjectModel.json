@@ -1,0 +1,36 @@
+{
+  "resume": {
+    "name": {
+      "first": "",
+      "middle": "",
+      "last": ""
+    },
+    "address": {
+      "street": "",
+      "city": "",
+      "state": "",
+      "zip": ""
+    },
+    "contact": {
+      "website": "",
+      "email": "",
+      "phone": ""
+    },
+    "summary": "",
+    "skills": [],
+    "jobs": [
+      {
+        "id": "",
+        "company": {
+          "name": "",
+          "location": "",
+          "website": ""
+        },
+        "dateStart": "",
+        "dateEnd": "",
+        "title": "",
+        "highlights": []
+      }
+    ]
+  }
+}
