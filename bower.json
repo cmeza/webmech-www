@@ -1,0 +1,25 @@
+{
+  "name": "webmechanix-www",
+  "description": "Webmechanix.net Resume site in PHP and AngularJS",
+  "main": "",
+  "authors": [
+    "Chris Meza <chrismeza@webmechanix.net>"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.webmechanix.net",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "bootstrap": "^3.3.6",
+    "underscore": "^1.8.3",
+    "font-awesome": "^4.6.1"
+  }
+}

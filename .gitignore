@@ -11,3 +11,8 @@
 /bin/
 /composer.phar
 /.idea
+/node_modules/*
+web/fonts/*
+web/wm.js
+web/wm.css
+web/lib/*

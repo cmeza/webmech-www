@@ -1,0 +1,26 @@
+{
+  "name": "webmechanix-www",
+  "version": "2.0.1",
+  "description": "Webmechanix.Net Website",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "cmeza3@bitbucket.org/cmeza3/webmech-www.git"
+  },
+  "author": "Chris Meza <chrismeza@webmechanix.net>",
+  "license": "ISC",
+  "dependencies": {
+    "grunt-stripcomments": "~0.5.0",
+    "grunt-contrib-copy": "~1.0.0",
+    "load-grunt-tasks": "~3.5.0",
+    "grunt-contrib-clean": "~1.0.0",
+    "grunt-contrib-concat": "~1.0.1",
+    "grunt-contrib-cssmin": "~1.0.1",
+    "grunt-contrib-watch": "~1.0.0",
+    "grunt": "~1.0.1",
+    "grunt-contrib-less": "~1.3.0",
+    "grunt-contrib-uglify": "~1.0.1"
+  }
+}
