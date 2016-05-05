@@ -12,7 +12,7 @@ module.exports = function(grunt) {
     concat: {    
       jsSrc: {
         src: [
-          'src/webmechanix/js/**/*.js'
+          'src/Webmechanix/js/**'
         ],
         dest: 'web/wm.js'
       },
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
       },
       css: {
         src: [ 
-          'src/webmechanix/css/*.css'
+          'src/Webmechanix/css/**'
         ],
         dest: 'web/wm.css'
       },
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
         expand: true,
         flatten: true
       },
-      fontAwesome: {
+      fontBootstrap: {
         cwd: 'vendor/bower/',
         src: 'bootstrap/dist/fonts/*',
         dest: 'web/fonts',
@@ -103,11 +103,10 @@ module.exports = function(grunt) {
     watch: {
       scripts: {
         files: [
-          'src/webmechanix/js/**/*.js',
-          'src/webmechanix/css/**/*.css',
-          'vendor/bower/**/*'
+          'src/Webmechanix/**',
+          'vendor/bower/**'
         ],
-        tasks: ['dev'],
+        tasks: ['default'],
         options: {
           spawn: false
         }

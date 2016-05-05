@@ -23,7 +23,7 @@ if (!in_array(@$_SERVER['REMOTE_ADDR'], array(
     exit('This script is only accessible from localhost.');
 }
 
-require_once dirname(__FILE__).'/../app/SymfonyRequirements.php';
+require_once '../../app/SymfonyRequirements.php';
 
 $symfonyRequirements = new SymfonyRequirements();
 
@@ -37,8 +37,8 @@ $minorProblems = $symfonyRequirements->getFailedRecommendations();
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="robots" content="noindex,nofollow" />
         <title>Symfony Configuration Checker</title>
-        <link rel="stylesheet" href="bundles/framework/css/structure.css" media="all" />
-        <link rel="stylesheet" href="bundles/framework/css/body.css" media="all" />
+        <link rel="stylesheet" href="../bundles/framework/css/structure.css" media="all" />
+        <link rel="stylesheet" href="../bundles/framework/css/body.css" media="all" />
         <style type="text/css">
             /* styles copied from bundles/sensiodistribution/webconfigurator/css/install.css */
             body {
@@ -121,7 +121,7 @@ $minorProblems = $symfonyRequirements->getFailedRecommendations();
         <div id="content">
             <div class="header clear-fix">
                 <div class="header-logo">
-                    <img src="bundles/framework/images/logo_symfony.png" alt="Symfony" />
+                    <img src="../bundles/framework/images/logo_symfony.png" alt="Symfony" />
                 </div>
 
                 <div class="search">
@@ -129,7 +129,7 @@ $minorProblems = $symfonyRequirements->getFailedRecommendations();
                     <div class="form-row">
 
                       <label for="search-id">
-                          <img src="bundles/framework/images/grey_magnifier.png" alt="Search on Symfony website" />
+                          <img src="../bundles/framework/images/grey_magnifier.png" alt="Search on Symfony website" />
                       </label>
 
                       <input name="q" id="search-id" type="search" placeholder="Search on Symfony website" />

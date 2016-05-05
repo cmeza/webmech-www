@@ -1,0 +1,19 @@
+@primaryColor: #E0FF91;
+/* 224 255 145 */
+
+@secondaryColor: #9DE89B;
+/* 157 232 155 */
+
+@tertiaryColor: #B7FFDE;
+/* 183 255 222 */
+
+@backgroundColor: #A1E1E8;
+/* 161 225 232 */
+
+@highlightColor: #84B3FF;
+/* 132 179 255 */
+
+body {
+  background-color: @backgroundColor;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+}
