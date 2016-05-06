@@ -12,6 +12,8 @@ module.exports = function(grunt) {
     concat: {    
       jsSrc: {
         src: [
+          'src/Webmechanix/js/wmApp.js',
+          'src/Webmechanix/js/wmStates.js',
           'src/Webmechanix/js/**'
         ],
         dest: 'web/wm.js'
@@ -19,6 +21,7 @@ module.exports = function(grunt) {
       jsLib: {
         src:  [
           'vendor/bower/angular/angular.js',
+          'vendor/bower/angular-ui-router/release/angular-ui-router.js',
           'vendor/bower/underscore/underscore.js',
           'vendor/bower/jquery/dist/jquery.js',
           'vendor/bower/bootstrap/dist/bootstrap.js'
@@ -111,6 +114,17 @@ module.exports = function(grunt) {
           spawn: false
         }
       }
+    },
+
+    ngAnnotate: {
+      options: {
+        singleQuotes: true
+      },
+      app1: {
+        files: {
+          'web/wm.js': ['web/wm.js']
+        }
+      }
     }
   });
   
@@ -123,7 +137,8 @@ module.exports = function(grunt) {
       'copy', 
       'comments', 
       'less', 
-      'cssmin', 
+      'cssmin',
+      'ngAnnotate',
       'uglify'
     ]
   );
@@ -135,7 +150,8 @@ module.exports = function(grunt) {
       'copy', 
       'comments', 
       'less', 
-      'cssmin'
+      'cssmin',
+      'ngAnnotate'
     ]
   );
 

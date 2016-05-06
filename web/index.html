@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-ng-app="wmApp">
 <head>
   <meta charset="UTF-8">
   <title>WebMechanix.net</title>
   <link rel="stylesheet" href="/lib/lib.css">
   <link rel="stylesheet" href="/wm.css">
+  <base href="/">
 </head>
 <body>
   <h1>WebMechanix.Net</h1>
   <h2>Resume for Chris Meza</h2>
 
-  <!--<div data-ng-module="wmApp"></div>-->
+  <ui-view>
+    Default
+  </ui-view>
 
   <script type="application/javascript" src="/lib/lib.js"></script>
   <script type="application/javascript" src="/wm.js"></script>
