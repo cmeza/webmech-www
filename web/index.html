@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app="wmApp">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>WebMechanix.net</title>
@@ -7,13 +7,17 @@
   <link rel="stylesheet" href="/wm.css">
   <base href="/">
 </head>
-<body>
+<body ng-app="wmApp">
   <h1>WebMechanix.Net</h1>
   <h2>Resume for Chris Meza</h2>
 
-  <ui-view>
-    Default
-  </ui-view>
+  <nav>
+    <a href="#/resume">Resume</a>
+    <a href="#/resume/list">List</a>
+    <a href="#/resume/detail">Detail</a>
+  </nav>
+
+  <span ui-view></span>
 
   <script type="application/javascript" src="/lib/lib.js"></script>
   <script type="application/javascript" src="/wm.js"></script>
