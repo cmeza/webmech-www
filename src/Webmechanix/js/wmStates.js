@@ -13,7 +13,7 @@ angular.module('wmApp.wmStates', [])
       controller: 'ResumeListCtrl'
     })
     .state('resume.detail', {
-      url: '/detail',
+      url: '/detail/:jobId',
       templateUrl: 'ng/views/resume/resumeDetail.html',
       controller: 'ResumeDetailCtrl'
     })

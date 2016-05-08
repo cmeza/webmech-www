@@ -16,4 +16,5 @@
 body {
   background-color: @backgroundColor;
   font-family: "Trebuchet MS", Verdana, sans-serif;
+  text-align: center;
 }

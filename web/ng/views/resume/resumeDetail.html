@@ -1,4 +1,33 @@
 
-<h3>Resume Detail</h3>
+<h3>Employment Details</h3>
 
-<p>{{ data }}</p>
+<p>
+  {{ jobDetails.company.name }}<br>
+  {{ jobDetails.company.location }}<br>
+  {{ jobDetails.company.website }}
+</p>
+
+<p>
+  From: {{ jobDetails.dateStart }}<br>
+  To: {{ jobDetails.dateEnd }}
+</p>
+
+<p>
+  {{ jobDetails.title }}
+</p>
+
+<h4>Responsibilities</h4>
+<ol data-ng-if="jobDetails.details.length > 1">
+  <li data-ng-repeat="detail in jobDetails.details">
+    <span>Client: {{ detail.client }}</span>
+    <ul data-ng-repeat="item in detail.highlights">
+      <li>{{ item }}</li>
+    </ul>
+  </li>
+</ol>
+
+<span data-ng-if="jobDetails.details.length == 1" data-ng-repeat="detail in jobDetails.details">
+  <ul data-ng-repeat="item in detail.highlights">
+    <li>{{ item }}</li>
+  </ul>
+</span>

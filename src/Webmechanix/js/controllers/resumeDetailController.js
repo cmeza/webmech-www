@@ -1,7 +1,14 @@
 angular.module('wmApp.ResumeDetailController', [])
 
-.controller('ResumeDetailCtrl', function($scope) {
+.controller('ResumeDetailCtrl', function($scope, $stateParams, ResumeSvc) {
   console.log('ResumeDetailCtrl');
 
-  $scope.data = 'detail data';
+  function getDetail() {
+    return ResumeSvc.getJobDetail($stateParams.jobId).then(function(data) {
+      console.log('scope detail');
+      $scope.jobDetails = data;
+    });
+  }
+
+  getDetail();
 });

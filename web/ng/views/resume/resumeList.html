@@ -1,4 +1,10 @@
+<h3>Employment History</h3>
 
-<h3>Resume List</h3>
-
-<p>{{ data }}</p>
+<ul>
+  <li data-ng-repeat="job in jobs">
+    <a data-ui-sref="resume.detail({ jobId: job.id })">
+      {{ job.company.name }} - {{ job.company.location }}<br>
+      {{ job.title }} from {{ job.dateStart | date }} to {{ job.dateEnd | date }}
+    </a>
+  </li>
+</ul>

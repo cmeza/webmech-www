@@ -1,5 +1,25 @@
-<h3>Resume Summary</h3>
+<h2>About Me</h2>
+<p>
+  {{ summary.name.first }} {{ summary.name.middle }} {{ summary.name.last }}
+</p>
 
-<span ui-view>
-  <p>{{ data }}</p>
-</span>
+<h4>Address</h4>
+<p data-ng-if="showContact">
+  {{ summary.address.street }}<br>
+  {{ summary.address.city }}, {{ summary.address.state }} {{ summary.address.zip }}
+</p>
+
+<h4>Contact</h4>
+<p data-ng-if="showContact">
+  Website: {{ summary.contact.website }}<br>
+  Email: {{ summary.contact.email }}<br>
+  Phone: {{ summary.contact.phone }}
+</p>
+<p data-ng-if="!showContact">
+  Register to see contact information.
+</p>
+
+<h4>Summary</h4>
+<p>{{ ::summary.summary }}</p>
+
+<span data-ui-view></span>
