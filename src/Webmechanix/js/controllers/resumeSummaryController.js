@@ -13,5 +13,9 @@ angular.module('wmApp.ResumeSummaryController', [])
     getSummary();
   });
 
-  $scope.showContact = true;
+  $scope.showContact = false;
+
+  $scope.setShowContact = function() {
+    $scope.showContact = true;
+  };
 });

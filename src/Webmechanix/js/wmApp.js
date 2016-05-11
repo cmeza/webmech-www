@@ -16,15 +16,16 @@ angular.module('wmApp', [
     // controllers
     'wmApp.ResumeSummaryController',
     'wmApp.ResumeListController',
-    'wmApp.ResumeDetailController'
+    'wmApp.ResumeDetailController',
+    'wmApp.wmDownloadController',
+    'wmApp.wmSourceCodeController',
 
     // directives
-])
+    'wmApp.wmDateDirective'
+  ]
+)
 
-.run(function (
-    $rootScope,
-    $location
-) {
+.run(function($rootScope) {
     console.log ('App Loaded');// [', $location.state(), ']');
 
     // debug info
