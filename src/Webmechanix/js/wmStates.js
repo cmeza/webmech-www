@@ -22,6 +22,11 @@ angular.module('wmApp.wmStates', [])
       templateUrl: 'ng/views/resume/resumeSkills.html',
       controller: 'ResumeSummaryCtrl'
     })
+    .state('resume.portfolio', {
+      url: '/porfolio',
+      templateUrl: 'ng/views/resume/resumePortfolio.html',
+      controller: 'ResumePortfolioCtrl'
+    })
     .state('resume.history', {
       url: '/history',
       templateUrl: 'ng/views/resume/resumeList.html',

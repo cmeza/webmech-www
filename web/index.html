@@ -8,18 +8,20 @@
 </head>
 <body ng-app="wmApp">
   <header>
-    <img src="images/webmech-logo.png" style="max-width: 100%;height: auto;">
+    <img src="images/logo/webmech-logo.png" style="max-width: 100%;height: auto;">
   </header>
 
-  <main class="container">
+  <main class="container" data-ng-cloak>
     <section class="summary row" data-ng-if="$state.is('resume.summary')">
-      <span class="col col-sm-4 col-xs-12">
-        <img src="images/chris1.jpg">
+      <span class="col col-sm-4 col-xs-12 text-center">
+        <img src="images/face/chris1.jpg" style="max-width: 100%;height: auto;">
       </span>
       <span class="col col-sm-8 col-xs-12">
         <h2>About Me</h2>
         <p>
-          Christopher Meza
+          <strong>Christopher Meza</strong><br>
+          Full Stack Developer with a PHP/AngularJS focus<br>
+          Proficient with Relational Databases with a MySQL focus
         </p>
       </span>
     </section>
@@ -28,9 +30,10 @@
       <nav class="col">
         <a ui-sref="resume.summary"    ui-sref-active="active">Home</a>
         <a ui-sref="resume.contact"    ui-sref-active="active">Contact</a>
-        <a ui-sref="resume.history"    ui-sref-active="active">Employment History</a>
+        <a ui-sref="resume.history"    ui-sref-active="active">History</a>
         <a ui-sref="resume.skills"     ui-sref-active="active">Skills</a>
-        <a ui-sref="resume.sourceCode" ui-sref-active="active">Source Code</a>
+        <a ui-sref="resume.portfolio"  ui-sref-active="active">Portfolio</a>
+        <a ui-sref="resume.sourceCode" ui-sref-active="active">Source</a>
         <a ui-sref="resume.download"   ui-sref-active="active">Download</a>
       </nav>
     </div>

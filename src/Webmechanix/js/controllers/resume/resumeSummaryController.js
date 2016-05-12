@@ -1,4 +1,4 @@
-angular.module('wmApp.ResumeSummaryController', [])
+angular.module('wmApp.resumeSummaryController', [])
 
 .controller('ResumeSummaryCtrl', function($scope, ResumeSvc) {
   console.log('ResumeSummaryCtrl');

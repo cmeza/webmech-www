@@ -14,11 +14,12 @@ angular.module('wmApp', [
     'wmApp.resumeService',
 
     // controllers
-    'wmApp.ResumeSummaryController',
-    'wmApp.ResumeListController',
-    'wmApp.ResumeDetailController',
-    'wmApp.wmDownloadController',
-    'wmApp.wmSourceCodeController',
+    'wmApp.resumeSummaryController',
+    'wmApp.resumeHistoryController',
+    'wmApp.resumeJobDetailController',
+    'wmApp.resumeDownloadController',
+    'wmApp.resumeSourceCodeController',
+    'wmApp.resumePortfolioController',
 
     // directives
     'wmApp.wmDateDirective'

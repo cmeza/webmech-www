@@ -1,4 +1,4 @@
-angular.module('wmApp.ResumeListController', [])
+angular.module('wmApp.resumeHistoryController', [])
 
 .controller('ResumeListCtrl', function($scope, ResumeSvc) {
   console.log('ResumeListCtrl');

@@ -59,11 +59,12 @@ section {
 
 .content {
   border-top: 0;
+  margin-bottom: 20px;
 }
 
 nav {
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   background-color: lightgrey;
   border: 1px solid darkgrey;
   border-bottom: 0;
@@ -71,6 +72,8 @@ nav {
   a {
     padding: 8px 15px;
     display: inline-block;
+    width: 13%;
+    text-align: center;
   }
   /*a:first-child {
     padding-left: 15px;
