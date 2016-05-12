@@ -54,7 +54,7 @@ angular.module('wmApp.wmStates', [])
     })
   ;
 
-  $urlRouterProvider.otherwise('/resume');
+  $urlRouterProvider.otherwise('/resume/summary');
 })
 .run(function($rootScope, $state) {
   // $state.go('resume');
