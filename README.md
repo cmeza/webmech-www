@@ -1,4 +1,4 @@
-webmech
+WebMechanix.Net
 =======
 
-A Symfony project created on February 28, 2016, 5:47 pm.
+An AngularJS (for the time being) front end for my Resume API.
