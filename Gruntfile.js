@@ -81,7 +81,7 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'web/wm.js': ['web/wm.js'],
-          'web/lib/js/lib.js': ['web/lib/js/lib.js']
+          'web/lib/lib.js': ['web/lib/lib.js']
         },
         mangle: false
       }
@@ -149,8 +149,7 @@ module.exports = function(grunt) {
       'concat', 
       'copy', 
       'comments', 
-      'less', 
-      'cssmin',
+      'less',
       'ngAnnotate'
     ]
   );
