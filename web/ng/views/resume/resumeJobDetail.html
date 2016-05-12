@@ -1,25 +1,25 @@
-
-<h3>Employment Details</h3>
+<h3>
+  {{ jobDetails.company.name }}
+  <small>- {{ jobDetails.company.location }}</small>
+</h3>
 
 <p>
-  {{ jobDetails.company.name }}<br>
-  {{ jobDetails.company.location }}<br>
   {{ jobDetails.company.website }}
 </p>
 
 <p>
-  From: {{ jobDetails.dateStart }} [{{ dateStart }}]<br>
-  To: {{ jobDetails.dateEnd }} [{{ dateEnd }}]
+  Title: {{ jobDetails.title }}
 </p>
 
 <p>
-  {{ jobDetails.title }}
+  From: {{ jobDetails.dateStart }} <!--[{{ dateStart }}]--><br>
+  To: {{ jobDetails.dateEnd }} <!--[{{ dateEnd }}]-->
 </p>
 
 <h4>Responsibilities</h4>
 <ol data-ng-if="jobDetails.details.length > 1">
   <li data-ng-repeat="detail in jobDetails.details">
-    <span>Client: {{ detail.client }}</span>
+    <strong>Client: {{ detail.client }}</strong>
     <ul data-ng-repeat="item in detail.highlights">
       <li>{{ item }}</li>
     </ul>

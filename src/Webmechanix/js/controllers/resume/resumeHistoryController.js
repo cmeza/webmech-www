@@ -1,7 +1,7 @@
-angular.module('wmApp.resumeHistoryController', [])
+angular.module('wmApp.resumeJobHistoryController', [])
 
-.controller('ResumeListCtrl', function($scope, ResumeSvc) {
-  console.log('ResumeListCtrl');
+.controller('ResumeJobHistoryCtrl', function($scope, ResumeSvc) {
+  console.log('ResumeJobHistoryCtrl');
 
   function getList() {
     return ResumeSvc.getJobsList().then(function(data) {

@@ -15,7 +15,7 @@ angular.module('wmApp', [
 
     // controllers
     'wmApp.resumeSummaryController',
-    'wmApp.resumeHistoryController',
+    'wmApp.resumeJobHistoryController',
     'wmApp.resumeJobDetailController',
     'wmApp.resumeDownloadController',
     'wmApp.resumeSourceCodeController',

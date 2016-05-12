@@ -29,13 +29,13 @@ angular.module('wmApp.wmStates', [])
     })
     .state('resume.history', {
       url: '/history',
-      templateUrl: 'ng/views/resume/resumeList.html',
-      controller: 'ResumeListCtrl'
+      templateUrl: 'ng/views/resume/resumeJobHistory.html',
+      controller: 'ResumeJobHistoryCtrl'
     })
     .state('resume.detail', {
       url: '/detail/:jobId',
-      templateUrl: 'ng/views/resume/resumeDetail.html',
-      controller: 'ResumeDetailCtrl'
+      templateUrl: 'ng/views/resume/resumeJobDetail.html',
+      controller: 'ResumeJobDetailCtrl'
     })
     .state('resume.download', {
       url: '/download',

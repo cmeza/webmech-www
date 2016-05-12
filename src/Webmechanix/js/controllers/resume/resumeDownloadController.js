@@ -1,6 +1,8 @@
 angular.module('wmApp.resumeDownloadController', [])
 
 .controller('ResumeDownloadCtrl', function($scope, $http) {
+  console.log('ResumeDownloadCtrl');
+
   $scope.showResumeLink = false;
 
   $scope.setShowResumeLink = function() {

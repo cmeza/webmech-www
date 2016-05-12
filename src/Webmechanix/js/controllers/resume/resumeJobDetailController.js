@@ -1,15 +1,13 @@
 angular.module('wmApp.resumeJobDetailController', [])
 
 .controller('ResumeJobDetailCtrl', function($scope,
-                                         $stateParams,
-                                         $filter,
-                                         ResumeSvc) {
+                                            $stateParams,
+                                            $filter,
+                                            ResumeSvc) {
   console.log('ResumeJobDetailCtrl');
 
   function getDetail() {
     return ResumeSvc.getJobDetail($stateParams.jobId).then(function(data) {
-      console.log('scope detail');
-
       var dates = data.id;
       dates = dates.split('-');
 
@@ -22,7 +20,7 @@ angular.module('wmApp.resumeJobDetailController', [])
       $scope.dateStart = $filter('date')(dates[0], 'MMMM yyyy');
       $scope.dateEnd = $filter('date')(dates[1], 'MMMM yyyy');
 
-      console.log('dates', dates, $scope.dateStart, $scope.dateEnd);
+      //console.log('dates', dates, $scope.dateStart, $scope.dateEnd);
       $scope.jobDetails = data;
     });
   }
