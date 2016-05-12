@@ -98,7 +98,8 @@ module.exports = function(grunt) {
     cssmin: {
       combine: {
         files: {
-          'web/wm.css': ['web/wm.css']
+          'web/wm.css': ['web/wm.css'],
+          'web/lib/lib.css': ['web/lib/lib.css']
         }
       }
     },
@@ -120,7 +121,7 @@ module.exports = function(grunt) {
       options: {
         singleQuotes: true
       },
-      app1: {
+      wmApp: {
         files: {
           'web/wm.js': ['web/wm.js']
         }
@@ -136,9 +137,9 @@ module.exports = function(grunt) {
       'concat', 
       'copy', 
       'comments', 
-      'less', 
-      'cssmin',
+      'less',
       'ngAnnotate',
+      'cssmin',
       'uglify'
     ]
   );
@@ -147,8 +148,7 @@ module.exports = function(grunt) {
     'default', [
       'clean', 
       'concat', 
-      'copy', 
-      'comments', 
+      'copy',
       'less',
       'ngAnnotate'
     ]
