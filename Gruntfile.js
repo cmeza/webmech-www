@@ -4,10 +4,15 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    clean: [
-      'web/fonts/**',
-      'web/lib/**'
-    ],
+    clean: {
+      always: [
+        'web/fonts/**',
+        'web/lib/**'
+      ],
+      prod: [
+        '~/public_html/*'
+      ]
+    },
     
     concat: {    
       jsSrc: {
@@ -57,6 +62,12 @@ module.exports = function(grunt) {
         dest: 'web/fonts',
         expand: true,
         flatten: true
+      },
+      prodFiles: {
+        cwd: '~/webmech-www',
+        src: 'web/**',
+        dest: '~/public_html',
+        expand: true
       }
     },
 
@@ -134,10 +145,10 @@ module.exports = function(grunt) {
   grunt.registerTask( 
     'prod', [
       'clean', 
-      'concat', 
-      'copy', 
-      'comments', 
+      'concat',
+      'copy',
       'less',
+      'comments',
       'ngAnnotate',
       'cssmin',
       'uglify'
@@ -146,9 +157,10 @@ module.exports = function(grunt) {
   
   grunt.registerTask(
     'default', [
-      'clean', 
-      'concat', 
-      'copy',
+      'clean:always',
+      'concat',
+      'copy:fontAwesome',
+      'copy:fontBootstrap',
       'less',
       'ngAnnotate'
     ]
