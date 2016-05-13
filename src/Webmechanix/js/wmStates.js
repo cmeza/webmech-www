@@ -32,8 +32,8 @@ angular.module('wmApp.wmStates', [])
       templateUrl: 'ng/views/resume/resumeJobHistory.html',
       controller: 'ResumeJobHistoryCtrl'
     })
-    .state('resume.detail', {
-      url: '/detail/:jobId',
+    .state('resume.history.detail', {
+      url: '/:jobId',
       templateUrl: 'ng/views/resume/resumeJobDetail.html',
       controller: 'ResumeJobDetailCtrl'
     })

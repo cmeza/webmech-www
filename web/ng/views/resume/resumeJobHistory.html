@@ -1,10 +1,12 @@
-<h3>My Employment History</h3>
+<ui-view>
+  <h3>My Employment History</h3>
 
-<ul>
-  <li data-ng-repeat="job in jobs">
-    <a data-ui-sref="resume.detail({ jobId: job.id })">
-      {{ job.company.name }} - {{ job.company.location }}<br>
-      {{ job.title }} from {{ job.dateStart | date }} to {{ job.dateEnd | date }}
-    </a>
-  </li>
-</ul>
+  <ul>
+    <li data-ng-repeat="job in jobs">
+      <a data-ui-sref="resume.history.detail({ jobId: job.id })">
+        {{ job.company.name }} - {{ job.company.location }}<br>
+        {{ job.title }} from {{ job.dateStart | date }} to {{ job.dateEnd | date }}
+      </a>
+    </li>
+  </ul>
+</ui-view>

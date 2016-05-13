@@ -5,6 +5,11 @@
   <title>WebMechanix.net</title>
   <link rel="stylesheet" href="/lib/lib.css">
   <link rel="stylesheet" href="/wm.css">
+  <link rel="icon" type="image/png" href="images/logo/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="images/logo/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="images/logo/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="images/logo/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="images/logo/favicon-128.png" sizes="128x128" />
 </head>
 <body ng-app="wmApp">
   <header>
@@ -13,7 +18,7 @@
 
   <main class="container" data-ng-cloak>
     <section class="summary row" data-ng-if="$state.is('resume.summary')">
-      <span class="col col-sm-4 col-xs-12 text-center">
+      <span class="col col-sm-4 col-xs-12 text-center face">
         <img src="images/face/chris1.jpg" style="max-width: 100%;height: auto;">
       </span>
       <span class="col col-sm-8 col-xs-12">
@@ -42,7 +47,10 @@
   </main>
 
   <footer>
-    &copy; WebMechanix.Net: 1998 - <span data-wm-date="yyyy"></span>
+    WebMechanix.Net
+    <img src="images/logo/webmech-icon-logo.png">
+    <span class="copy">&copy;</span>
+    1998 - <span data-wm-date="yyyy"></span>
   </footer>
 
   <script type="application/javascript" src="/lib/lib.js"></script>
