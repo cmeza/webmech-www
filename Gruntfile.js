@@ -9,9 +9,14 @@ module.exports = function(grunt) {
         'web/fonts/**',
         'web/lib/**'
       ],
-      prod: [
-        '~/public_html/*'
-      ]
+      prod: {
+        options: {
+          force: true
+        },
+        src: [
+          '../public_html/*'
+        ]
+      }
     },
     
     concat: {    
@@ -146,12 +151,12 @@ module.exports = function(grunt) {
     'prod', [
       'clean', 
       'concat',
-      'copy',
       'less',
       'comments',
       'ngAnnotate',
       'cssmin',
-      'uglify'
+      'uglify',
+      'copy'
     ]
   );
   
