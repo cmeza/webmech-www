@@ -1,12 +1,28 @@
-<ui-view>
+<ui-view class="history">
   <h3>My Employment History</h3>
 
-  <ul>
-    <li data-ng-repeat="job in jobs">
-      <a data-ui-sref="resume.history.detail({ jobId: job.id })">
-        {{ job.company.name }} - {{ job.company.location }}<br>
-        {{ job.title }} from {{ job.dateStart | date }} to {{ job.dateEnd | date }}
-      </a>
-    </li>
-  </ul>
+  <p>
+    Click anywhere on the row to view the details.
+  </p>
+
+  <table class="table table-striped table-hover table-responsive">
+    <thead>
+      <tr>
+        <th colspan="2">Dates</th>
+        <th>Title</th>
+        <th>Company</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-ng-repeat="job in jobs"
+          data-ng-click="gotoDetail(job.id)">
+        <td>{{ job.dateStart | date:'yyyy' }}</td>
+        <td>{{ job.dateEnd | date }}</td>
+        <td class="job-title">{{ job.title }}</td>
+        <td>{{ job.company.name }}</td>
+        <td>{{ job.company.location }}</td>
+      </tr>
+    </tbody>
+  </table>
 </ui-view>

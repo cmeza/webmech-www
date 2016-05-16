@@ -1,6 +1,6 @@
 angular.module('wmApp.resumeJobHistoryController', [])
 
-.controller('ResumeJobHistoryCtrl', function($scope, ResumeSvc) {
+.controller('ResumeJobHistoryCtrl', function($scope, $state, ResumeSvc) {
   console.log('ResumeJobHistoryCtrl');
 
   function getList() {
@@ -8,6 +8,10 @@ angular.module('wmApp.resumeJobHistoryController', [])
       $scope.jobs = data;
     })
   }
+
+  $scope.gotoDetail = function(jobId) {
+    $state.go('resume.history.detail', {jobId: jobId}, {location: true});
+  };
 
 /*  $scope.$on('$stateChangeStart ', function() {
     console.log('stateChangeStart');

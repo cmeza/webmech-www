@@ -1,0 +1,13 @@
+.history {
+  .item {
+    margin: 8px 0;
+  }
+
+  .table-hover > tbody > tr:hover {
+    background-color: rgba(135, 177, 202, 0.48);
+  }
+
+  .job-title {
+    font-weight: bold;
+  }
+}
