@@ -1,11 +1,34 @@
-<div class="col">
-  <h2>Download My Resume</h2>
+<h2>Download My Resume</h2>
 
-  <p data-ng-show="!showResumeLink" data-ng-click="setShowResumeLink()">
-    Click to see the download link.
+<div data-ng-show="!showResumeLink" data-ng-click="setShowResumeLink()">
+  Click to see the download link.
+</div>
+
+<div data-ng-show="showResumeLink">
+  <p>
+    Resume last updated: May 4, 2016.
   </p>
 
-  <p data-ng-show="showResumeLink">
-    <button type="button" class="btn btn-primary" data-ng-click="returnResumeFile()">Resume: May 5, 2016</button>
-  </p>
+  <form name="resumeDownload" novalidate>
+    <div class="form-group">
+      <label for="userEmail">Your Email Address:</label>
+      <input type="email" name="userEmail" id="userEmail"
+             class="form-control" placeholder="Email" required
+             data-ng-bind="userEmail"
+             ng-model-options="{updateOn: 'blur'}">
+    </div>
+
+    <p class="help-block">
+      Your email address will never be used for nefarious purposes.
+      <!--[{{ resumeDownload.$invalid }} {{ resumeDownload.$prestine }}]-->
+    </p>
+
+    <p>
+      <button type="submit" class="btn btn-primary"
+              data-ng-click="returnResumeFile()"
+              ng-disabled="resumeDownload.$invalid">
+        Download Resume
+      </button>
+    </p>
+  </form>
 </div>
