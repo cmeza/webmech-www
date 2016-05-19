@@ -1,33 +1,48 @@
-<h2>Download My Resume</h2>
+<span class="download">
+  <h2>Download My Resume</h2>
 
-<div data-ng-show="!showResumeLink" data-ng-click="setShowResumeLink()">
-  Click to see the download link.
-</div>
+  <div data-ng-show="!showResumeLink" data-ng-click="setShowResumeLink()">
+    Click to see the download link.
+  </div>
 
-<div data-ng-show="showResumeLink">
-  <p>
-    Resume last updated: May 4, 2016.
-  </p>
+  <div data-ng-show="showResumeLink">
 
-  <form name="downloadForm" data-ng-submit="returnResumeFile()" novalidate>
-    <div class="form-group">
-      <label for="userEmail">Your Email Address:</label>
-      <input type="email" name="userEmail" id="userEmail"
-             class="form-control" placeholder="Email" required
-             data-ng-model="userEmail"
-             data-ng-model-options="{ updateOn: 'blur' }">
-    </div>
-
-    <p class="help-block">
-      Your email address will never be used for nefarious purposes.
-      [{{ userEmail }}]
+    <p class="file-info">
+      <span>File name:</span>    {{ fileInfo.fileName }}<br>
+      <span>File size:</span>    {{ (fileInfo.fileSize / 1024) | number:2 }} KB<br>
+      <span>Last updated:</span> {{ fileInfo.fileDateFixed | date:'MMMM d, yyyy' }}
     </p>
 
-    <p>
-      <button type="submit" class="btn btn-primary"
-              data-ng-disabled="downloadForm.$invalid">
-        Download Resume
-      </button>
+    <form name="downloadForm" data-ng-submit="returnResumeFile()" novalidate>
+      <div class="form-group">
+        <label for="userEmail">Your Email Address:</label>
+        <input type="email" name="userEmail" id="userEmail"
+               class="form-control" placeholder="Email" required
+               data-ng-maxlength="100"
+               data-ng-model="userEmail"
+               data-ng-model-options="{ updateOn: 'blur' }">
+      </div>
+
+      <p class="help-block">
+        Your email address will never be used for nefarious purposes.
+      </p>
+
+      <p>
+        <button type="submit" class="btn btn-primary"
+                data-ng-disabled="downloadForm.$invalid">
+          Download Resume
+        </button>
+      </p>
+    </form>
+
+    <p class="help-block small">
+      NOTE: For some reason, when you download the file, it is <a data-ng-href="images/misc/download-error.png">saying
+      it is corrupt</a> (hint: it is not, but I am researching the error).
     </p>
-  </form>
-</div>
+
+    <p class="help-block small">
+      The file will open if you hit "ok", then "yes" <a data-ng-href="images/misc/download-recover.png">
+      if you trust the source</a>.
+    </p>
+  </div>
+</span>

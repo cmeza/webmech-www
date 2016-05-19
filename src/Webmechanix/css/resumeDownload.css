@@ -1,0 +1,9 @@
+.download {
+  .file-info {
+    span {
+      width: 120px;
+      display: inline-block;
+      font-weight: bold;
+    }
+  }
+}

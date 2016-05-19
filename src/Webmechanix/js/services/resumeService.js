@@ -38,10 +38,26 @@ angular.module('wmApp.resumeService', [])
 
     getResumeFile: function(emailAddress) {
       var url = this.apiUrl + '/resume/file',
-          params = {emailAddress: emailAddress};
+          params = {
+            emailAddress: emailAddress
+          },
+          config = {
+            responseType: 'blob',
+            headers: {
+              'Accept': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+            }
+          };
 
-      return $http.post(url, params, {responseType: 'arraybuffer'}).then(function(data) {
+      return $http.post(url, params, config).then(function(data) {
         console.log('resume', data);
+        return data.data;
+      });
+    },
+
+    getResumeFileInfo: function() {
+      var url = this.apiUrl + '/resume/file/info';
+
+      return $http.get(url).then(function(data) {
         return data.data;
       });
     }
