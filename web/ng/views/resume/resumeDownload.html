@@ -9,24 +9,23 @@
     Resume last updated: May 4, 2016.
   </p>
 
-  <form name="resumeDownload" novalidate>
+  <form name="downloadForm" data-ng-submit="returnResumeFile()" novalidate>
     <div class="form-group">
       <label for="userEmail">Your Email Address:</label>
       <input type="email" name="userEmail" id="userEmail"
              class="form-control" placeholder="Email" required
-             data-ng-bind="userEmail"
-             ng-model-options="{updateOn: 'blur'}">
+             data-ng-model="userEmail"
+             data-ng-model-options="{ updateOn: 'blur' }">
     </div>
 
     <p class="help-block">
       Your email address will never be used for nefarious purposes.
-      <!--[{{ resumeDownload.$invalid }} {{ resumeDownload.$prestine }}]-->
+      [{{ userEmail }}]
     </p>
 
     <p>
       <button type="submit" class="btn btn-primary"
-              data-ng-click="returnResumeFile()"
-              ng-disabled="resumeDownload.$invalid">
+              data-ng-disabled="downloadForm.$invalid">
         Download Resume
       </button>
     </p>

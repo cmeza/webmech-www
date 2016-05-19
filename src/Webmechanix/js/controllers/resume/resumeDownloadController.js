@@ -1,6 +1,6 @@
 angular.module('wmApp.resumeDownloadController', [])
 
-.controller('ResumeDownloadCtrl', function($scope, $http) {
+.controller('ResumeDownloadCtrl', function($scope, ResumeSvc, FileSaver, Blob) {
   console.log('ResumeDownloadCtrl');
 
   $scope.showResumeLink = true;
@@ -13,6 +13,11 @@ angular.module('wmApp.resumeDownloadController', [])
   };
 
   $scope.returnResumeFile = function() {
-    alert('COMING SOON!');
+    return ResumeSvc.getResumeFile($scope.userEmail).then(function(data) {
+      console.log('get file', $scope.userEmail, data);
+      var file = new Blob([data], {type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
+      FileSaver.saveAs(file, 'ChrisMeza_resume.docx');
+      // return data.data;
+    });
   };
 });

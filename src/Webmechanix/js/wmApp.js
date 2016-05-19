@@ -3,6 +3,8 @@
 angular.module('wmApp', [
     // ext dependencies
     'ui.router',
+    'ngMessages',
+    'ngFileSaver',
 
     // config
     'wmApp.wmStates',
@@ -25,6 +27,10 @@ angular.module('wmApp', [
     'wmApp.wmDateDirective'
   ]
 )
+
+.config(function($httpProvider, wmConstants) {
+  $httpProvider.defaults.headers.common['X-WEBMECHANIX-APIKEY'] = wmConstants.webmech.api.key;
+})
 
 .run(function($rootScope) {
     console.log ('App Loaded');// [', $location.state(), ']');
