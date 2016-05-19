@@ -71,9 +71,9 @@ module.exports = function(grunt) {
         flatten: true
       },
       prodFiles: {
-        cwd: '~/webmech-www',
-        src: 'web/**',
-        dest: '~/public_html',
+        cwd: 'web/',
+        src: '**',
+        dest: '../public_html',
         expand: true
       }
     },
