@@ -1,17 +1,12 @@
 <ui-view class="history">
   <h3>My Employment History</h3>
 
-  <p>
-    Click anywhere on the row to view the details.
-  </p>
-
   <table class="table table-striped table-hover table-responsive">
     <thead>
       <tr>
         <th colspan="2">Dates</th>
         <th>Title</th>
-        <th>Company</th>
-        <th>Location</th>
+        <th colspan="2">Company</th>
       </tr>
     </thead>
     <tbody>
@@ -21,7 +16,11 @@
         <td>{{ job.dateEnd | date }}</td>
         <td class="job-title">{{ job.title }}</td>
         <td>{{ job.company.name }}</td>
-        <td>{{ job.company.location }}</td>
+        <td class="details">
+          <button type="button" class="btn btn-primary btn-sm">
+            Details
+          </button>
+        </td>
       </tr>
     </tbody>
   </table>

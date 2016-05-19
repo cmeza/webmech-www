@@ -7,6 +7,14 @@
     background-color: rgba(135, 177, 202, 0.48);
   }
 
+  .table > tbody > tr > td {
+    vertical-align: middle;
+  }
+
+  .table > tbody > tr > td.details {
+    padding: 4px;
+  }
+
   .job-title {
     font-weight: bold;
   }
