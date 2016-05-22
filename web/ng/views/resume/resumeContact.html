@@ -1,17 +1,37 @@
-<h2>My Contact Information</h2>
+<span class="contact">
+  <h2>My Contact Information</h2>
 
-<h3 data-ng-if="showContact">Address</h3>
-<p data-ng-if="showContact">
-  {{ summary.address.street }}<br>
-  {{ summary.address.city }}, {{ summary.address.state }} {{ summary.address.zip }}
-</p>
+  <h3 data-ng-if="showContact">Address</h3>
+  <p data-ng-if="showContact">
+    <address>
+      {{ summary.address.street }}<br>
+      {{ summary.address.city }}, {{ summary.address.state }} {{ summary.address.zip }}
+    </address>
+  </p>
 
-<h3>Contact Information</h3>
-<p data-ng-if="showContact">
-  Website: {{ summary.contact.website }}<br>
-  Email: {{ summary.contact.email }}<br>
-  Phone: {{ summary.contact.phone }}
-</p>
-<p data-ng-if="!showContact" data-ng-click="setShowContact()">
-  Click to see the contact information.
-</p>
+  <h3>Contact</h3>
+  <p data-ng-if="showContact" class="contact-links">
+    <strong>LinkedIn:</strong>
+    <a data-ng-href="https://{{ summary.contact.linkedin }}">
+    {{ summary.contact.linkedin }}</a><br>
+
+    <strong>GitHub:</strong>
+    <a data-ng-href="https://{{ summary.contact.github }}">
+    {{ summary.contact.github }}</a><br>
+
+    <strong>Website:</strong>
+    <a data-ng-href="http://{{ summary.contact.website }}">
+    {{ summary.contact.website }}</a><br>
+
+    <strong>Email:</strong>
+    <a data-ng-href="mailto:{{ summary.contact.email }}">
+    {{ summary.contact.email }}</a><br>
+
+    <strong>Phone:</strong>
+    <a data-ng-href="tel:{{ summary.contact.phone }}">
+    {{ summary.contact.phone }}</a>
+  </p>
+  <p data-ng-if="!showContact" data-ng-click="setShowContact()">
+    Click to see the contact information.
+  </p>
+</span>

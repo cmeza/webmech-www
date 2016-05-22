@@ -49,7 +49,7 @@ angular.module('wmApp.resumeService', [])
           };
 
       return $http.post(url, params, config).then(function(data) {
-        console.log('resume', data);
+        // console.log('resume file', data);
         return data.data;
       });
     },

@@ -1,0 +1,8 @@
+.contact {
+  .contact-links {
+    strong {
+      width: 80px;
+      display: inline-block;
+    }
+  }
+}

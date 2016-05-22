@@ -33,9 +33,9 @@ angular.module('wmApp', [
 })
 
 .run(function($rootScope) {
-    console.log ('App Loaded');// [', $location.state(), ']');
+  console.log('App Loaded');// [', $location.state(), ']');
 
-    // debug info
-    $rootScope.$on("$stateChangeError", console.log.bind(console));
+  // debug info
+  $rootScope.$on("$stateChangeError", console.log.bind(console));
 })
 ;
