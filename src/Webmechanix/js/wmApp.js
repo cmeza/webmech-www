@@ -24,7 +24,9 @@ angular.module('wmApp', [
     'wmApp.resumePortfolioController',
 
     // directives
-    'wmApp.wmDateDirective'
+    'wmApp.wmDateDirective',
+    'wmApp.wmAddImageModalDirective',
+    'wmApp.wmImageModalDirective'
   ]
 )
 

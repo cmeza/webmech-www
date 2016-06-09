@@ -30,12 +30,12 @@ module.exports = function(grunt) {
       },
       jsLib: {
         src:  [
+          'vendor/bower/jquery/dist/jquery.js',
           'vendor/bower/angular/angular.js',
           'vendor/bower/angular-ui-router/release/angular-ui-router.js',
           'vendor/bower/angular-messages/angular-messages.js',
+          'vendor/bower/bootstrap/dist/js/bootstrap.js',
           'vendor/bower/underscore/underscore.js',
-          'vendor/bower/jquery/dist/jquery.js',
-          'vendor/bower/bootstrap/dist/bootstrap.js',
           'vendor/bower/angular-file-saver/dist/angular-file-saver.bundle.js'
         ],
         dest: 'web/lib/lib.js'

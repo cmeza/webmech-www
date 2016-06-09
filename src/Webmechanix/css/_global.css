@@ -17,6 +17,9 @@
 
 @borderColor: darkgray;
 
+/* angular-bootstrap requirement */
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
 body {
   background-color: white;
   background-color: #f3f3f3;
