@@ -4,7 +4,7 @@ angular.module('wmApp.wmConstants', [])
   webmech: {
     api: {
       // url: '//api.wm.dev',
-      url: 'http://api.webmechanix.net',
+      url: 'https://api.webmechanix.net',
       key: 'ABCDE98765' 
     }
   }
